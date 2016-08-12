@@ -7,7 +7,13 @@
 
             <ul class="list-group">
             @foreach($card->notes as $note)
-                <li class="list-group-item">{{ $note->body }}</li>
+                <li class="list-group-item">
+                    {{ $note->body }}
+                    <a href="#" style="margin-left: 50px">{{ $note->user->username }}</a>
+                    <a href="/notes/{{$note->id}}">
+                        <button class="btn btn-info btn-left">See</button>
+                    </a>
+                </li>
             @endforeach
             </ul>
             
