@@ -16,3 +16,5 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('notes/{note}/edit', 'NotesController@edit');
     Route::patch('notes/{note}', 'NotesController@update');
 });
+
+Route::get('dashboard', 'HomeController@index');
